@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.json", // Inherit settings from the main tsconfig
+  "compilerOptions": {
+    "jsx": "react-jsx", // Use 'react' if you're not using the new JSX transform
+    "baseUrl": ".", // This should remain as is
+    "paths": {
+      "@/*": ["./src/*"] // Adjust paths as needed
+    },
+    "outDir": "./dist", // Specify an output directory if needed
+    "rootDir": "./src" // Specify the root directory for input files
+  },
+  "include": ["src/**/*"], // Include your source files
+  "exclude": ["node_modules"] // Exclude node_modules
+}
