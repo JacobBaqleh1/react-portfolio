@@ -1,27 +1,49 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import NavbarUI from "./UI/NavbarUI";
+
 export default function Navbar() {
   return (
-    <>
+    <div className="max-w-[1000px]">
       <NavbarUI
         links={[
-          <Link key={1} to="/">
-            Home
-          </Link>,
-          <Link key={2} to="/about">
+          <NavLink
+            key={1}
+            to="/"
+            className={({ isActive }) =>
+              isActive ? "underline underline-offset-4" : ""
+            }
+          >
             About
-          </Link>,
-          <Link key={3} to="/contact">
+          </NavLink>,
+          <NavLink
+            key={2}
+            to="/contact"
+            className={({ isActive }) =>
+              isActive ? "underline underline-offset-4" : ""
+            }
+          >
             Contact
-          </Link>,
-          <Link key={4} to="/portfolio">
+          </NavLink>,
+          <NavLink
+            key={3}
+            to="/portfolio"
+            className={({ isActive }) =>
+              isActive ? "underline underline-offset-4" : ""
+            }
+          >
             Portfolio
-          </Link>,
-          <Link key={5} to="/resume">
+          </NavLink>,
+          <NavLink
+            key={4}
+            to="/resume"
+            className={({ isActive }) =>
+              isActive ? "underline underline-offset-4" : ""
+            }
+          >
             Resume
-          </Link>,
+          </NavLink>,
         ]}
       />
-    </>
+    </div>
   );
 }

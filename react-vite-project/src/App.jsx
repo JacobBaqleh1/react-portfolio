@@ -5,8 +5,10 @@ import Footer from "../../react-vite-project/src/components/Footer";
 export default function App() {
   return (
     <div className="flex flex-col min-h-screen">
-      <Nav />
-      <main className="mx-3 flex-grow">
+      <div className="mx-auto w-full max-w-[900px]">
+        <Nav />
+      </div>
+      <main className="mx-auto w-full max-w-[900px] flex-grow">
         <Outlet />
       </main>
       <Footer />

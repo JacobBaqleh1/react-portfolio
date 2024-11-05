@@ -2,10 +2,9 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { ModeToggle } from "./mode-toggle";
 /* eslint-disable react/prop-types */
 export default function NavbarUI({ links }) {
@@ -27,21 +26,45 @@ export default function NavbarUI({ links }) {
             </DropdownMenuTrigger>
 
             <DropdownMenuContent>
-              <DropdownMenuSeparator />
               <DropdownMenuItem asChild>
-                <Link to="/">Home</Link>
+                <NavLink
+                  to="/"
+                  className={({ isActive }) =>
+                    isActive ? "underline underline-offset-4" : ""
+                  }
+                >
+                  About
+                </NavLink>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <Link to="/about">About</Link>
+                <NavLink
+                  to="/contact"
+                  className={({ isActive }) =>
+                    isActive ? "underline underline-offset-4" : ""
+                  }
+                >
+                  Contact
+                </NavLink>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <Link to="/contact">Contact</Link>
+                <NavLink
+                  to="/portfolio"
+                  className={({ isActive }) =>
+                    isActive ? "underline underline-offset-4" : ""
+                  }
+                >
+                  Portfolio
+                </NavLink>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <Link to="/portfolio">Portfolio</Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <Link to="/resume">Resume</Link>
+                <NavLink
+                  to="/resume"
+                  className={({ isActive }) =>
+                    isActive ? "underline underline-offset-4" : ""
+                  }
+                >
+                  Resume
+                </NavLink>
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
