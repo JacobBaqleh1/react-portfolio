@@ -9,7 +9,7 @@ import { ModeToggle } from "./mode-toggle";
 /* eslint-disable react/prop-types */
 export default function NavbarUI({ links }) {
   return (
-    <nav className="w-full p-4">
+    <nav className="w-full p-4 border-b-2 border-gray-200 mb-4">
       <div className="flex flex-row justify-between items-center ">
         <h1 className="pl-6">Jacob Baqleh</h1>
 

@@ -9,19 +9,45 @@ export default function Portfolio() {
           {
             key: 1,
             img: "https://images.unsplash.com/photo-1534361960057-19889db9621e?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZG9nfGVufDB8fDB8fHww",
-            title: "afsa",
-            description: "Description for Project 1",
+            title: "Pet Friends",
+            description: "A website for pet lovers to find pets.",
 
-            link: "/",
-            gitHub: "/",
+            link: "https://remix-pets.vercel.app/",
+            gitHub: "https://github.com/JacobBaqleh1/remix-pets",
           },
           {
             key: 2,
-            img: "https://plus.unsplash.com/premium_photo-1721830791498-ec809d9d94ec?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dW5kZXIlMjBjb25zdHJ1Y3Rpb258ZW58MHx8MHx8fDA%3D",
-            title: "afsa",
-            description: "This is a description for Project Two.",
-            link: "/project-two",
-            gitHub: "/",
+            img: "https://images.unsplash.com/photo-1705077031869-51b60754302a?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHdlYXRoZXIlMjBmb3JlY2FzdHxlbnwwfHwwfHx8MA%3D%3D",
+            title: "Weather Global",
+            description:
+              "A website to check the weather of any city in the world.",
+            link: "https://weather-global.onrender.com/",
+            gitHub: "https://github.com/JacobBaqleh1/weather-global",
+          },
+          {
+            key: 3,
+            img: "https://images.unsplash.com/photo-1664575602276-acd073f104c1?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2VvfGVufDB8fDB8fHww",
+            title: "Employee Management System",
+            description: "An in terminal employee management system.",
+            link: "https://github.com/JacobBaqleh1/Employee-Manager-postgresql",
+            gitHub:
+              "https://github.com/JacobBaqleh1/Employee-Manager-postgresql",
+          },
+          {
+            key: 4,
+            img: "https://images.unsplash.com/photo-1551522435-a13afa10f103?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzJ8fGZhbmN5JTIwZ2FyYWdlfGVufDB8fDB8fHww",
+            title: "Vehicle Builder Generator",
+            description: "An in terminal vehicle builder generator.",
+            link: "https://github.com/JacobBaqleh1/vehicle-builder-generator",
+            gitHub: "https://github.com/JacobBaqleh1/vehicle-builder-generator",
+          },
+          {
+            key: 5,
+            img: "https://github.com/JacobBaqleh1/event-task-scheduler/raw/main/assets/photos/image.png",
+            title: "Event Task Scheduler",
+            description: "A personalized event task scheduler.",
+            link: "https://github.com/JacobBaqleh1/event-task-scheduler",
+            gitHub: "https://github.com/JacobBaqleh1/event-task-scheduler",
           },
         ]}
       />
