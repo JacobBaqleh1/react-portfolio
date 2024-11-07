@@ -13,8 +13,8 @@ export default function About() {
             </h1>
             <img
               className=" md:hidden w-36 h-40 rounded-[50%] mx-auto"
-              src="../src/assets/profilePic.jpg"
-              alt="gfdsgs"
+              src="/profilePic.jpg"
+              alt="profile"
             ></img>
             <p className="text-center mx-10 leading-loose text-xl ">
               Love turning ideas into real-world web applications. When im not
@@ -23,8 +23,8 @@ export default function About() {
           </div>
           <img
             className="hidden md:block w-40 h-40 rounded-[50%] mx-auto"
-            src="../src/assets/profilePic.jpg"
-            alt="gfdsgs"
+            src="/profilePic.jpg"
+            alt="profile"
           ></img>
         </section>
       </div>

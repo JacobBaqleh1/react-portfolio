@@ -11,7 +11,7 @@ export default function Footer() {
               rel="noopener noreferrer"
             >
               <img
-                src="../src/assets/github.svg"
+                src="/github.svg"
                 alt="GitHub Icon"
                 className="w-8 h-8 m-4"
               />
@@ -22,7 +22,7 @@ export default function Footer() {
               rel="noopener noreferrer"
             >
               <img
-                src="../src/assets/linkedIn.svg"
+                src="/linkedIn.svg"
                 alt="Linked in"
                 className="w-8 h-8 m-4"
               />
@@ -32,7 +32,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src="../src/assets/x.svg" alt="X" className="w-8 h-8 m-4" />
+              <img src="/x.svg" alt="X" className="w-8 h-8 m-4" />
             </a>
           </div>
         </div>
