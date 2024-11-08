@@ -1,4 +1,14 @@
 export default function Contact() {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(new FormData(form)).toString(),
+    })
+      .then(() => console.log("Form successfully submitted"))
+      .catch((error) => alert(error));
   return (
     <div className="flex flex-col items-center justify-center p-6">
       <h2 className="text-2xl font-bold mb-4">Contact Me</h2>
@@ -6,6 +16,7 @@ export default function Contact() {
         name="contact"
         method="POST"
         data-netlify="true"
+        onSubmit={handleSubmit}
         className="w-full max-w-md bg-white p-4 rounded shadow-lg"
       >
         {/* Hidden input for Netlify form submission */}
