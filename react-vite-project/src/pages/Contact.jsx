@@ -6,7 +6,6 @@ export default function Contact() {
         name="contact"
         method="POST"
         data-netlify="true"
-        onSubmit="submit"
         className="w-full max-w-md bg-white p-4 rounded shadow-lg"
       >
         {/* Hidden input for Netlify form submission */}
