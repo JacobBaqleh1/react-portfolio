@@ -49,6 +49,14 @@ export default function Portfolio() {
             link: "https://github.com/JacobBaqleh1/event-task-scheduler",
             gitHub: "https://github.com/JacobBaqleh1/event-task-scheduler",
           },
+          {
+            key: 6,
+            img: "https://images.unsplash.com/photo-1521791055366-0d553872125f?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGRvY3VtZW50fGVufDB8fDB8fHww",
+            title: "Read Me Generator",
+            description: "An in terminal read me generator.",
+            link: "https://github.com/JacobBaqleh1/readme-generator",
+            gitHub: "https://github.com/JacobBaqleh1/readme-generator",
+          },
         ]}
       />
     </div>

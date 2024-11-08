@@ -1,14 +1,33 @@
+import { useState } from "react";
+
 export default function Contact() {
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const form = e.target;
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(new FormData(form)).toString(),
-    })
-      .then(() => console.log("Form successfully submitted"))
-      .catch((error) => alert(error));
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // Simulate form submission
+    setIsSubmitted(true);
+    // Clear form inputs
+    setFormData({
+      name: "",
+      email: "",
+      message: "",
+    });
+  };
+
   return (
     <div className="flex flex-col items-center justify-center p-6">
       <h2 className="text-2xl font-bold mb-4">Contact Me</h2>
@@ -27,6 +46,8 @@ export default function Contact() {
           <input
             type="text"
             name="name"
+            value={formData.name}
+            onChange={handleChange}
             className="mt-1 block w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
             required
           />
@@ -37,6 +58,8 @@ export default function Contact() {
           <input
             type="email"
             name="email"
+            value={formData.email}
+            onChange={handleChange}
             className="mt-1 block w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
             required
           />
@@ -46,6 +69,8 @@ export default function Contact() {
           <span className="text-gray-700">Message</span>
           <textarea
             name="message"
+            value={formData.message}
+            onChange={handleChange}
             rows="4"
             className="mt-1 block w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
             required
@@ -59,6 +84,8 @@ export default function Contact() {
           Send
         </button>
       </form>
+
+      {isSubmitted && <p className="mt-4 text-green-500">Message sent!</p>}
     </div>
   );
 }
