@@ -5,8 +5,8 @@ export default function Contact() {
       <form
         name="contact"
         method="POST"
-        // eslint-disable-next-line react/no-unknown-property
-        netlify
+        data-netlify="true"
+        onSubmit="submit"
         className="w-full max-w-md bg-white p-4 rounded shadow-lg"
       >
         {/* Hidden input for Netlify form submission */}
