@@ -16,17 +16,34 @@ export default function Contact() {
     });
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // Simulate form submission
+const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await fetch('/forms.html', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams({
+          'form-name': 'contact',
+          ...formData
+        }).toString()
+      });
+      
+  if (response.ok) {
+ // Simulate form submission
     setIsSubmitted(true);
     // Clear form inputs
     setFormData({
       name: "",
       email: "",
       message: "",
-    });
-  };
+    });  }
+} catch (error) {
+  alert(`${error}`)
+}
+}
+
+
+
 
   return (
     <div className="flex flex-col items-center justify-center p-6">

@@ -16,6 +16,7 @@ export default function NavbarUI({ links }) {
         <ul className="hidden md:flex space-x-4">
           {links.map((link) => link)}
         </ul>
+
         <ModeToggle />
         {/* Dropdown Menu Section */}
         <div className="md:hidden">
