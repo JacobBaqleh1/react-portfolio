@@ -5,6 +5,16 @@ export default {
   content: ["./index.html", "./src/**/*.{ts,tsx,js,jsx}"],
   theme: {
     extend: {
+        animation: {
+    'float-slow': 'floatUp 20s ease-in-out infinite',
+  },
+  keyframes: {
+    floatUp: {
+      '0%': { transform: 'translateY(0) scale(1)', opacity: '0.9' },
+      '50%': { transform: 'translateY(-300px) scale(1.1)', opacity: '0.1' },
+      '100%': { transform: 'translateY(-600px) scale(0.9)', opacity: '0' },
+    },
+  },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
@@ -52,6 +62,7 @@ export default {
           5: "hsl(var(--chart-5))",
         },
       },
+      
     },
   },
   plugins: ["tailwindcss-animate"],

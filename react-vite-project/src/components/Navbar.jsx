@@ -13,10 +13,19 @@ export default function Navbar() {
               isActive ? "underline underline-offset-4" : ""
             }
           >
-            About
+            Home
           </NavLink>,
           <NavLink
             key={2}
+            to="/about"
+            className={({ isActive }) =>
+              isActive ? "underline underline-offset-4" : ""
+            }
+          >
+            About
+          </NavLink>,
+          <NavLink
+            key={3}
             to="/contact"
             className={({ isActive }) =>
               isActive ? "underline underline-offset-4" : ""

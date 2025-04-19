@@ -8,7 +8,7 @@ export default function App() {
       <div className="mx-auto w-full max-w-[900px]">
         <Nav />
       </div>
-      <main className="mx-auto w-full max-w-[900px] flex-grow">
+      <main className="mx-auto w-full  flex-grow">
         <Outlet />
       </main>
       <Footer />

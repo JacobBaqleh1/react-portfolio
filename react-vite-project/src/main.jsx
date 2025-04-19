@@ -10,6 +10,7 @@ import Contact from "./pages/Contact.jsx";
 import Resume from "./pages/Resume.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { ThemeProvider } from "./components/theme-provider.tsx";
+import Home from "./pages/Home.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -18,7 +19,11 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <About />,
+        element: <Home />,
+      },
+      {
+        path: "/about",
+        element: <About />
       },
 
       {

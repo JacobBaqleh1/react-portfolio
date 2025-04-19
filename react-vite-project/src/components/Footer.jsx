@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <div className="bg-gray-500 w-full">
+    <div className=" w-full">
       <div className="mx-auto max-w-[900px]">
         <div className="flex flex-col justify-center text-center pt-6 pb-8 md:pl-8 md:justify-start md:text-left">
           <p>Jacob Baqleh</p>
