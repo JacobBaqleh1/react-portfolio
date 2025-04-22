@@ -105,7 +105,7 @@ export default function Home() {
                 title: "ROAM: Nation Park Finder",
                 description: "Assembled and lead a team of 3 developers to create core features and intergrate third party APIs. Integrated MongoDB for robust data storage and utilized GraphQL to streamline API queries and improve frontend-backend communication.",
 
-                link: "https://roam-sigma.vercel.app/",
+                link: "/projects/roam",
                 gitHub: "/",
                 technologies: ["React", "Node.js", "MongoDB", "GraphQL", "Tailwind CSS"],
               },
