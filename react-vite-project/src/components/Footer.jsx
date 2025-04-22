@@ -4,7 +4,7 @@ export default function Footer() {
       <div className="mx-auto max-w-[900px]">
         <div className="flex flex-col justify-center text-center pt-6 pb-8 md:pl-8 md:justify-start md:text-left">
           <p>Jacob Baqleh</p>
-          <div className="flex flex-row justify-center">
+          <div className="flex flex-row justify-center bg-white dark:bg-[#91b9f9] rounded-full m-auto">
             <a
               href="https://github.com/JacobBaqleh1"
               target="_blank"

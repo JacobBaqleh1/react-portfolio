@@ -10,9 +10,9 @@ import { ModeToggle } from "./mode-toggle";
 export default function NavbarUI({ links }) {
   return (
     <nav className="w-full p-4 border-b-2 border-gray-200 mb-4">
-     
+
       <div className="flex flex-row justify-between items-center  ">
-         <h1 className="pl-6 text-center"><NavLink to="/">Jacob Baqleh</NavLink></h1>
+        <h1 className="pl-6 text-center"><NavLink to="/">Jacob Baqleh</NavLink></h1>
 
         <ul className="hidden md:flex space-x-4">
           {links.map((link) => link)}
@@ -49,14 +49,14 @@ export default function NavbarUI({ links }) {
                 </NavLink>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <NavLink
-                  to="/portfolio"
+                <a
+                  href="/#projects"
                   className={({ isActive }) =>
                     isActive ? "underline underline-offset-4" : ""
                   }
                 >
                   Portfolio
-                </NavLink>
+                </a>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
                 <NavLink

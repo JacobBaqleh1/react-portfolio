@@ -11,6 +11,7 @@ import Resume from "./pages/Resume.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { ThemeProvider } from "./components/theme-provider.tsx";
 import Home from "./pages/Home.jsx";
+import Roam from "./pages/Roam.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
       {
         path: "/resume",
         element: <Resume />,
+      },
+      {
+        path: "/projects/roam",
+        element: <Roam />,
       },
     ],
   },
