@@ -16,7 +16,7 @@ export default function Contact() {
     });
   };
 
-const handleSubmit = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       const response = await fetch('/forms.html', {
@@ -27,27 +27,28 @@ const handleSubmit = async (e) => {
           ...formData
         }).toString()
       });
-      
-  if (response.ok) {
- // Simulate form submission
-    setIsSubmitted(true);
-    // Clear form inputs
-    setFormData({
-      name: "",
-      email: "",
-      message: "",
-    });  }
-} catch (error) {
-  alert(`${error}`)
-}
-}
+
+      if (response.ok) {
+        // Simulate form submission
+        setIsSubmitted(true);
+        // Clear form inputs
+        setFormData({
+          name: "",
+          email: "",
+          message: "",
+        });
+      }
+    } catch (error) {
+      alert(`${error}`)
+    }
+  }
 
 
 
 
   return (
     <div className="flex flex-col items-center justify-center p-6 bg-gradient-to-b from-black via-purple-900 to-black w-full">
-      <h2 className="text-4xl font-bold py-8">Get in touch!</h2>
+      <h2 className="text-4xl font-bold py-8 text-white">Get in touch!</h2>
       <form
         name="contact"
         method="POST"
@@ -58,51 +59,51 @@ const handleSubmit = async (e) => {
         {/* Hidden input for Netlify form submission */}
         <input type="hidden" name="form-name" value="contact" />
         <h2 className="dark:text-black mb-8">Contact Form</h2>
-<div
-className="flex justify-between p-6"
->
-  
-  <div>
-        <label className="block mb-4">
-          <span className="text-gray-700">Your Name</span>
-          
-          <input
-            type="text"
-            name="name"
-            placeholder="Your Name"
-            value={formData.name}
-            onChange={handleChange}
-            className="mt-1 block w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500 dark:text-black"
-            required
-          />
-        </label>
+        <div
+          className="flex justify-between p-6"
+        >
 
-        <label className="block mb-4">
-          <span className="text-gray-700">Email</span>
-          <input
-            type="email"
-            name="email"
-            placeholder="Your email"
-            value={formData.email}
-            onChange={handleChange}
-            className="mt-1 block w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500 dark:text-black"
-            required
-          />
-        </label>
-        </div>
+          <div>
+            <label className="block mb-4">
+              <span className="text-gray-700">Your Name</span>
 
-        <label className="block mb-4">
-          <span className="text-gray-700">Message</span>
-          <textarea
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            rows="4"
-            placeholder="Message"
-            className="mt-1 h-[10rem] block w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500 dark:text-black"
-            required
-          ></textarea>
-        </label>
+              <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                value={formData.name}
+                onChange={handleChange}
+                className="mt-1 block w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500 dark:text-black"
+                required
+              />
+            </label>
+
+            <label className="block mb-4">
+              <span className="text-gray-700">Email</span>
+              <input
+                type="email"
+                name="email"
+                placeholder="Your email"
+                value={formData.email}
+                onChange={handleChange}
+                className="mt-1 block w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500 dark:text-black"
+                required
+              />
+            </label>
+          </div>
+
+          <label className="block mb-4">
+            <span className="text-gray-700">Message</span>
+            <textarea
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              rows="4"
+              placeholder="Message"
+              className="mt-1 h-[10rem] block w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500 dark:text-black"
+              required
+            ></textarea>
+          </label>
         </div>
 
         <button
