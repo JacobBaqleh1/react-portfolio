@@ -5,7 +5,7 @@ import Contact from "./Contact";
 export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen w-full ">
-      <section className="relative grid w-full h-[50rem] pt-32  mx-auto overflow-hidden bg-white dark:bg-[#0f172a]">
+      <section className="relative grid w-full h-[50rem] pt-10 sm:pt-32  mx-auto overflow-hidden bg-white dark:bg-[#0f172a]">
         {/* Animated Floating Circles */}
 
 

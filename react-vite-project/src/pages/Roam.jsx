@@ -64,10 +64,11 @@ export default function Roam() {
                     {/* Image on the right */}
                     <div>
                         <video src="/roam-gif.mp4"
-                            className=" h-auto rounded-md"
+                            className=" h-auto rounded-md pointer-events-none"
                             autoPlay
                             loop
                             muted
+                            playsInline
                         ></video>
                     </div>
                 </div>
