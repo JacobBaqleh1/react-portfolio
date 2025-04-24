@@ -63,7 +63,7 @@ export default function Roam() {
 
                     {/* Image on the right */}
                     <div>
-                        <video src="/public/roam-gif.mp4"
+                        <video src="/roam-gif.mp4"
                             className=" h-auto rounded-md"
                             autoPlay
                             loop

@@ -8,7 +8,7 @@ export default function PortfolioUI({ projects }) {
       {projects.map((project) => (
         <div
           key={project.key}
-          className="grid grid-cols-1 md:grid-cols-2 gap-4 border shadow-md   "
+          className="grid grid-cols-1 md:grid-cols-2 gap-4  shadow-md mb-10  "
         >
           {/* Content on the left */}
           <div className="flex flex-col justify-start pr-8">
@@ -42,7 +42,7 @@ export default function PortfolioUI({ projects }) {
               <img
                 src={project.img}
                 alt={`Project`}
-                className="w-full h-auto rounded-md object-cover mt-10 pl-4"
+                className="w-full h-auto rounded-md object-cover mb-10 md:mt-10 pl-4"
               />
             </Link>
           </div>

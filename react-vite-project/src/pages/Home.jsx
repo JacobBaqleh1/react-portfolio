@@ -101,7 +101,7 @@ export default function Home() {
             projects={[
               {
                 key: 1,
-                img: "https://images.unsplash.com/photo-1534361960057-19889db9621e?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZG9nfGVufDB8fDB8fHww",
+                img: "/roamLogo.jpg",
                 title: "ROAM: Nation Park Finder",
                 description: "Assembled and lead a team of 3 developers to create core features and intergrate third party APIs. Integrated MongoDB for robust data storage and utilized GraphQL to streamline API queries and improve frontend-backend communication.",
 
@@ -111,7 +111,7 @@ export default function Home() {
               },
               {
                 key: 2,
-                img: "https://plus.unsplash.com/premium_photo-1721830791498-ec809d9d94ec?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dW5kZXIlMjBjb25zdHJ1Y3Rpb258ZW58MHx8MHx8fDA%3D",
+                img: "/logoSkate.png",
                 title: "GeoGuesser Clone(Skate Spot Guesser)",
                 description: "Under development",
                 link: "/",
