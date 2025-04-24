@@ -60,7 +60,7 @@ export default function Contact() {
         <input type="hidden" name="form-name" value="contact" />
         <h2 className="dark:text-black mb-8">Contact Form</h2>
         <div
-          className="flex justify-between p-6"
+          className="flex justify-between p-6 flex-col"
         >
 
           <div>

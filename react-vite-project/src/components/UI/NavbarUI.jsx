@@ -55,7 +55,7 @@ export default function NavbarUI({ links }) {
                     isActive ? "underline underline-offset-4" : ""
                   }
                 >
-                  Portfolio
+                  Projects
                 </a>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
