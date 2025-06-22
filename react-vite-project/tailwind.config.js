@@ -1,26 +1,34 @@
-
 /** @type {import('tailwindcss').Config} */
 export default {
   darkMode: ["class"],
   content: ["./index.html", "./src/**/*.{ts,tsx,js,jsx}"],
   theme: {
     extend: {
-        animation: {
-    'float-slow': 'floatUp 20s ease-in-out infinite',
-  },
-  keyframes: {
-    floatUp: {
-      '0%': { transform: 'translateY(0) scale(1)', opacity: '0.9' },
-      '50%': { transform: 'translateY(-300px) scale(1.1)', opacity: '0.1' },
-      '100%': { transform: 'translateY(-600px) scale(0.9)', opacity: '0' },
-    },
-  },
+      animation: {
+        "float-slow": "floatUp 20s ease-in-out infinite",
+      },
+      keyframes: {
+        floatUp: {
+          "0%": { transform: "translateY(0) scale(1)", opacity: "0.9" },
+          "50%": { transform: "translateY(-300px) scale(1.1)", opacity: "0.1" },
+          "100%": { transform: "translateY(-600px) scale(0.9)", opacity: "0" },
+        },
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
       colors: {
+        palette: {
+          black: "#181A1B",
+          dark: "#223A5E",
+          blue: "#3867D6",
+          light: "#A5BFFF",
+          gray: "#E5E9F2",
+          white: "#FFFFFF",
+          accent: "#4B6584",
+        },
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
@@ -62,7 +70,6 @@ export default {
           5: "hsl(var(--chart-5))",
         },
       },
-      
     },
   },
   plugins: ["tailwindcss-animate"],

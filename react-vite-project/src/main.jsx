@@ -22,23 +22,7 @@ const router = createBrowserRouter([
         index: true,
         element: <Home />,
       },
-      {
-        path: "/about",
-        element: <About />
-      },
 
-      {
-        path: "/portfolio",
-        element: <Portfolio />,
-      },
-      {
-        path: "/contact",
-        element: <Contact />,
-      },
-      {
-        path: "/resume",
-        element: <Resume />,
-      },
       {
         path: "/projects/roam",
         element: <Roam />,
@@ -52,5 +36,5 @@ createRoot(document.getElementById("root")).render(
     <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
       <RouterProvider router={router} />
     </ThemeProvider>
-  </StrictMode>
+  </StrictMode>,
 );

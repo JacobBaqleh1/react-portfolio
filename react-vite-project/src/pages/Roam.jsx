@@ -1,79 +1,63 @@
+import { useNavigate } from "react-router-dom";
 
-
-
+/* eslint-disable react/no-unknown-property */
 export default function Roam() {
-    const project = {
-        key: 1,
-        img: "https://images.unsplash.com/photo-1534361960057-19889db9621e?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZG9nfGVufDB8fDB8fHww",
-        title: "ROAM: Nation Park Finder",
-        description: "ROAM is the perfect platform for outdoor enthusiasts who want to explore new destinations, discover hidden gems in their own 'backyard', and save dream locations for future adventures.",
+  const project = {
+    title: "ROAM",
+    live: "https://your-roam-live-site.com", // Replace with your actual live site URL
+    technologies: ["React", "Node.js", "MongoDB", "GraphQL", "Tailwind CSS"],
+    summary:
+      "ROAM is a full-stack web application designed to help users discover and explore national parks across the United States. With an interactive map, personalized profiles, and community-driven reviews, ROAM makes planning your next adventure easy and fun.",
+    features: [
+      "Search for parks by state or name",
+      "User authentication and personalized profiles",
+      "Save favorite parks and write reviews",
+      "Interactive map interface",
+    ],
+    role: "Solo Developer",
+  };
 
-        link: "/",
-        gitHub: "/",
-        technologies: ["React", "Node.js", "MongoDB", "GraphQL", "Tailwind CSS"],
-    }
-    return (
-        <>
+  const navigate = useNavigate();
 
-            <div className=" gap-10 mt-4 max-w-[1100px] flex justify-center items-center m-auto ">
-
-
-                <div
-                    key={project.key}
-                    className="grid grid-cols-1  gap-4 border shadow-md   "
-                >
-                    {/* Content on the left */}
-                    <div className="flex flex-col  pr-8">
-                        <h1 className="text-4xl font-extrabold m-4">{project.title}</h1>
-
-                        <p className="mt-2 text-2xl">{project.description}</p>
-
-                        <div className="my-8 flex justify-around ">
-
-
-                            <a
-                                href="https://roam-sigma.vercel.app/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="relative w-40 h-16 border border-gray-800 rounded-md my-16 ml-8"
-                            >
-                                <button
-                                    className="absolute top-0 left-0 transform -translate-x-4 -translate-y-4 transition-transform duration-300 hover:translate-x-0 hover:-translate-y-0 bg-blue-400 text-white px-4 py-2 rounded-md w-40 h-16 text-xl font-bold"
-                                >
-                                    View Live Site
-                                </button>
-                            </a>
-                            <div className="flex flex-col gap-4 m-4">
-                                <h2>Stack</h2>
-                                {project.technologies?.map((tech, index) => (
-                                    <div
-                                        key={index}
-                                        className="bg-black text-white px-2 py-1 rounded text-sm shadow dark:bg-white dark:text-black"
-                                    >
-                                        {tech}
-                                    </div>
-                                ))}
-                            </div>
-
-                        </div>
-                        {/* <Link to={project.gitHub} className="text-blue-500 mt-2 block">
-                    View GitHub Repo
-                  </Link> */}
-                    </div>
-
-                    {/* Image on the right */}
-                    <div>
-                        <video src="/roam-gif.mp4"
-                            className=" h-auto rounded-md pointer-events-none"
-                            autoPlay
-                            loop
-                            muted
-                            playsInline
-                        ></video>
-                    </div>
-                </div>
-
-            </div>
-        </>
-    )
+  return (
+    <div className="bg-[#324154] min-h-screen py-12 px-4">
+      <article className="max-w-3xl mx-auto text-white">
+        <h1 className="text-5xl font-extrabold text-blue-200 mb-4 tracking-tight">
+          {project.title}
+        </h1>
+        <div className="flex flex-wrap gap-2 mb-6">
+          {project.technologies.map((tech, index) => (
+            <span
+              key={index}
+              className="bg-blue-200 text-blue-900 px-3 py-1 rounded text-xs font-semibold shadow"
+            >
+              {tech}
+            </span>
+          ))}
+        </div>
+        <p className="text-lg text-blue-100 leading-relaxed mb-6">
+          {project.summary}
+        </p>
+        <h2 className="text-2xl font-bold text-blue-100 mb-2 mt-8">
+          Key Features
+        </h2>
+        <ul className="mb-8 text-blue-100 list-disc list-inside">
+          {project.features.map((feature, idx) => (
+            <li key={idx} className="mb-1">
+              {feature}
+            </li>
+          ))}
+        </ul>
+        <div className="mb-8 text-blue-100">
+          <span className="font-semibold">Role:</span> {project.role}
+        </div>
+        <button
+          className="px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-400 text-white font-bold rounded-lg shadow-lg hover:scale-105 transition-transform"
+          onClick={() => window.open(project.live, "_blank")}
+        >
+          Visit Live Site
+        </button>
+      </article>
+    </div>
+  );
 }

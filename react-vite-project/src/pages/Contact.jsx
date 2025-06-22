@@ -19,13 +19,13 @@ export default function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('/forms.html', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      const response = await fetch("/forms.html", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams({
-          'form-name': 'contact',
-          ...formData
-        }).toString()
+          "form-name": "contact",
+          ...formData,
+        }).toString(),
       });
 
       if (response.ok) {
@@ -39,12 +39,9 @@ export default function Contact() {
         });
       }
     } catch (error) {
-      alert(`${error}`)
+      alert(`${error}`);
     }
-  }
-
-
-
+  };
 
   return (
     <div className="flex flex-col items-center justify-center p-6 bg-gradient-to-b from-black via-purple-900 to-black w-full">
@@ -59,10 +56,7 @@ export default function Contact() {
         {/* Hidden input for Netlify form submission */}
         <input type="hidden" name="form-name" value="contact" />
         <h2 className="dark:text-black mb-8">Contact Form</h2>
-        <div
-          className="flex justify-between p-6 flex-col"
-        >
-
+        <div className="flex justify-between p-6 flex-col">
           <div>
             <label className="block mb-4">
               <span className="text-gray-700">Your Name</span>

@@ -14,7 +14,13 @@ export default function Portfolio() {
 
             link: "https://remix-pets.vercel.app/",
             gitHub: "https://github.com/JacobBaqleh1/remix-pets",
-            technologies: ["React", "Node.js", "MongoDB", "GraphQL", "Tailwind CSS"],
+            technologies: [
+              "React",
+              "Node.js",
+              "MongoDB",
+              "GraphQL",
+              "Tailwind CSS",
+            ],
           },
           {
             key: 2,
