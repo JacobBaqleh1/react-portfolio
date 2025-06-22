@@ -10,7 +10,15 @@ export default function Navbar() {
             isActive ? "bg-[#324154] text-white px-3 py-2 " : "px-3 py-2 "
           }
         >
-          Projects
+          My Projects
+        </NavLink>
+        <NavLink
+          to="/opensource"
+          className={({ isActive }) =>
+            isActive ? "bg-[#324154] text-white px-3 py-2 " : "px-3 py-2 "
+          }
+        >
+          Open Source Contributions
         </NavLink>
         {/*  */}
       </div>

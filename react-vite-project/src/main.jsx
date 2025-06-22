@@ -12,6 +12,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { ThemeProvider } from "./components/theme-provider.tsx";
 import Home from "./pages/Home.jsx";
 import Roam from "./pages/Roam.jsx";
+import OpenSource from "./pages/OpenSource.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
       {
         path: "/projects/roam",
         element: <Roam />,
+      },
+      {
+        path: "/opensource",
+        element: <OpenSource />,
       },
     ],
   },
