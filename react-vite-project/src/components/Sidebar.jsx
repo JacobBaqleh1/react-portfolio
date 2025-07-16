@@ -6,7 +6,8 @@ export default function Sidebar() {
       <h1 className="font-bold mb-16 text-4xl"><NavLink to='/'>JACOB BAQLEH</NavLink></h1>
       <p className="hidden sm:block">YOUR HOST</p>
       <div className="flex flex-row sm:flex-col gap-4 items-center">
-        <div className="overflow-hidden">        <img src="/me.JPEG" alt="profile pic" className="h-40 scale-[2.2] sm:scale-125 sm:h-full " />
+        <div className="overflow-hidden">
+          <img src="/me.jpg" alt="profile pic" className="h-40 scale-[2.2] sm:scale-125 sm:h-full" />
         </div>
         <p>
           I&#39;m Jacob Baqleh, a software developer in Portland, Oregon.{" "}
