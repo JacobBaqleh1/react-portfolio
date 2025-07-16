@@ -7,7 +7,7 @@ export default function Sidebar() {
       <p className="hidden sm:block">YOUR HOST</p>
       <div className="flex flex-row sm:flex-col gap-4 items-center">
         <div className="overflow-hidden">
-          <img src="/me.jpg" alt="profile pic" className="h-40 scale-[2.2] sm:scale-125 sm:h-full" />
+          <img src="/me.jpg" alt="profile pic" className="h-40 scale-[2.2] sm:scale-125 sm:h-30 lg:h-[20rem]" />
         </div>
         <p>
           I&#39;m Jacob Baqleh, a software developer in Portland, Oregon.{" "}
