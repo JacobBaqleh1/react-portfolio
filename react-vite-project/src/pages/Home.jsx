@@ -41,7 +41,7 @@ export default function Home() {
               key: 3,
               img: "/remix-pets.png",
               title: "Pet Friends",
-              description: "Pet Friends is a fullstack web application that connects users with adoptable pets through a live adoption API. Built with the Remix framework, it offers a seamless experience for browsing, searching, and learning more about pets looking for a new home.",
+              description: "Pet Friends is a web application that connects users with adoptable pets through a live adoption API. Built with the Remix framework, it offers a seamless experience for browsing, searching, and learning more about pets looking for a new home.",
               link: "https://remix-pets.vercel.app/",
               gitHub: "https://github.com/JacobBaqleh1/remix-pets",
               technologies: [
