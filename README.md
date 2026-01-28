@@ -2,7 +2,7 @@
 
 ## Website URL
 
-https://jacob-baqleh-portfolio.netlify.app/
+[https://jacobbaqleh.netlify.app/](https://jacobbaqleh.netlify.app/)
 
 ## Description
 
