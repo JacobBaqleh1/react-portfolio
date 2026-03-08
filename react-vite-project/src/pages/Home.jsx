@@ -9,6 +9,21 @@ export default function Home() {
           projects={[
             {
               key: 1,
+              img: "/brevo.png",
+              title: "Shopify Ecommerce Store ",
+              description: "Developed a fully functional e-commerce solution for BREVO, focusing on performance optimization and clean UI/UX design. I managed the end-to-end setup including product architecture, secure payment gateway integration, and automated shipping workflows. The site features a Whisper-quiet technical spec display and custom FAQ components designed to reduce customer friction and enhance the brand’s digital presence.",
+              link: "https://brevolabsco.com",
+              gitHub: "https://github.com/JacobBaqleh1/ROAM",
+              technologies: [
+                "Shopify ",
+                "Claude",
+                "MongoDB",
+                "GraphQL",
+                "Tailwind CSS",
+              ],
+            },
+            {
+              key: 2,
               img: "/roam-shot.png",
               title: "ROAM ",
               description:
@@ -25,7 +40,7 @@ export default function Home() {
               ],
             },
             {
-              key: 2,
+              key: 3,
               img: "/ssg-shot.png",
               title: "Skate Spot Guesser",
               description: "Skate Spot Guesser is an interactive game inspired by GeoGuessr, where players are challenged to identify skate spots from Google Street View images. Test your knowledge of famous skate locations and explore new spots virtually. Built with Next.js and the Google Street View API.",
@@ -38,7 +53,7 @@ export default function Home() {
               ],
             },
             {
-              key: 3,
+              key: 4,
               img: "/remix-pets.png",
               title: "Pet Friends",
               description: "Pet Friends is a web application that connects users with adoptable pets through a live adoption API. Built with the Remix framework, it offers a seamless experience for browsing, searching, and learning more about pets looking for a new home.",

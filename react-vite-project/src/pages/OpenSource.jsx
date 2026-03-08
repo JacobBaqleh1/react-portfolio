@@ -8,14 +8,23 @@ const OpenSource = () => {
     const openSourceProjects = [{
         id: 1,
         title: "Tenant First Aid",
-        description: "Contributing to an open-source legal AI platform that helps tenants understand their rights and navigate eviction processes. I've been building responsive React components, implementing TypeScript interfaces, and creating reusable UI elements for the frontend user experience.",
+        description: "A legal AI platform that helps tenants understand their rights and navigate eviction processes. I've been building responsive React components, implementing TypeScript interfaces, and creating reusable UI elements for the frontend user experience.",
         image: "/tenant.png",
         technologies: ["React", "TypeScript",],
         link: "https://tenantfirstaid.com/",
         githubUrl: "https://github.com/tenantfirstaid/tenantfirstaid",
 
     },
+{
+        id: 2,
+        title: "Safe Streets",
+        description: "Non-profit organization spreading awareness of traffic violence",
+        image: "/safeStreets.png",
+        technologies: ["Javascript, Decap CMS",],
+        link: "https://pdxfamiliesforsafestreets.org/",
+        githubUrl: "https://github.com/BurlapRobot/pdx-fss",
 
+    },
     ];
 
     const getLanguageColor = (language) => {

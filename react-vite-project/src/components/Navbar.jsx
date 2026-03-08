@@ -18,7 +18,7 @@ export default function Navbar() {
             isActive ? "bg-[#324154] text-white px-3 py-2 " : "px-3 py-2 "
           }
         >
-          Open Source Contributions
+          Team Projects
         </NavLink>
         {/*  */}
       </div>

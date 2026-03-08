@@ -10,7 +10,7 @@ export default function Sidebar() {
           <img src="/me.jpg" alt="profile pic" className="h-40 scale-[2.2] sm:scale-125 sm:h-30 lg:h-[20rem]" />
         </div>
         <p>
-          I&#39;m Jacob Baqleh, a software developer in Portland, Oregon.{" "}
+          I&#39;m Jacob Baqleh, a software developer living in Seattle, Washington.{" "}
           {/* <NavLink to="/about" className="text-red-800">
             More about me.
           </NavLink> */}
