@@ -17,8 +17,7 @@ export default function Home() {
               technologies: [
                 "Shopify ",
                 "Claude",
-                "MongoDB",
-                "GraphQL",
+                "Liquid",
                 "Tailwind CSS",
               ],
             },
