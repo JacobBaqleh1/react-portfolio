@@ -20,6 +20,14 @@ export default function Navbar() {
         >
           Team Projects
         </NavLink>
+        <NavLink
+          to="/contact"
+          className={({ isActive }) =>
+            isActive ? "bg-[#324154] text-white px-3 py-2 " : "px-3 py-2 "
+          }
+        >
+          Contact Me
+        </NavLink>
         {/*  */}
       </div>
     </div>

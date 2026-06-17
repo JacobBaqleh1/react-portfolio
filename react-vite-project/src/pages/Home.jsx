@@ -9,16 +9,20 @@ export default function Home() {
           projects={[
             {
               key: 1,
-              img: "/brevo.png",
-              title: "Shopify Ecommerce Store ",
-              description: "Developed a fully functional e-commerce solution for BREVO, focusing on performance optimization and clean UI/UX design. I managed the end-to-end setup including product architecture, secure payment gateway integration, and automated shipping workflows. The site features a Whisper-quiet technical spec display and custom FAQ components designed to reduce customer friction and enhance the brand’s digital presence.",
-              link: "https://brevolabsco.com",
-              gitHub: "https://github.com/JacobBaqleh1/ROAM",
+              img: "/mykitchenlist.png",
+              title: "MyKitchenList",
+              description:
+                "AI-powered kitchen management app built with React. Features include fridge/freezer/pantry tracking, photo scanning to add groceries, receipt scanning, and AI-powered meal suggestions based on what's on hand.",
+              link: "https://mykitchenlist.vercel.app",
               technologies: [
-                "Shopify ",
-                "Claude",
-                "Liquid",
-                "Tailwind CSS",
+                "React 19",
+                "React Router v7",
+                "Vite",
+                "Node.js",
+                "Express",
+                "Neon Postgres",
+                "Drizzle ORM",
+                "Claude (AWS Bedrock)",
               ],
             },
             {

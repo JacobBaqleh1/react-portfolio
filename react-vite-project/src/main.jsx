@@ -32,6 +32,10 @@ const router = createBrowserRouter([
         path: "/opensource",
         element: <OpenSource />,
       },
+      {
+        path: "/contact",
+        element: <Contact />,
+      },
     ],
   },
 ]);

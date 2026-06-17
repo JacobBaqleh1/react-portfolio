@@ -44,7 +44,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-6 bg-gradient-to-b from-black via-purple-900 to-black w-full">
+    <div className="flex flex-col items-center justify-center p-6 bg-[#324154] min-h-screen w-full">
       <h2 className="text-4xl font-bold py-8 text-white">Get in touch!</h2>
       <form
         name="contact"
