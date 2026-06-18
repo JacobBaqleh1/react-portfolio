@@ -5,9 +5,9 @@ import Sidebar from "./components/Sidebar";
 
 export default function App() {
   return (
-    <div className="flex flex-col sm:flex-row ">
+    <div className="flex flex-col sm:flex-row w-full overflow-x-hidden">
       <Sidebar />
-      <div className="flex-1">
+      <div className="flex-1 min-w-0">
         <Nav />
         <Outlet />
 
