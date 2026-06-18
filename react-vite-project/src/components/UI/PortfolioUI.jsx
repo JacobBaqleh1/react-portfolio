@@ -4,6 +4,24 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+const techStack = [
+  { name: "React",        icon: "https://cdn.simpleicons.org/react/61DAFB" },
+  { name: "Next.js",      icon: "https://cdn.simpleicons.org/nextdotjs/white" },
+  { name: "Remix",        icon: "https://cdn.simpleicons.org/remix/white" },
+  { name: "TypeScript",   icon: "https://cdn.simpleicons.org/typescript/3178C6" },
+  { name: "JavaScript",   icon: "https://cdn.simpleicons.org/javascript/F7DF1E" },
+  { name: "Node.js",      icon: "https://cdn.simpleicons.org/nodedotjs/5FA04E" },
+  { name: "Express",      icon: "https://cdn.simpleicons.org/express/white" },
+  { name: "GraphQL",      icon: "https://cdn.simpleicons.org/graphql/E10098" },
+  { name: "MongoDB",      icon: "https://cdn.simpleicons.org/mongodb/47A248" },
+  { name: "PostgreSQL",   icon: "https://cdn.simpleicons.org/postgresql/4169E1" },
+  { name: "Drizzle ORM",  icon: "https://cdn.simpleicons.org/drizzle/C5F74F" },
+  { name: "Tailwind CSS", icon: "https://cdn.simpleicons.org/tailwindcss/06B6D4" },
+  { name: "Vite",         icon: "https://cdn.simpleicons.org/vite/646CFF" },
+  { name: "AWS",          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" },
+  { name: "Anthropic",    icon: "https://cdn.simpleicons.org/anthropic/white" },
+];
+
 export default function PortfolioUI({ projects, title = "Projects" }) {
   const navigate = useNavigate();
   const [enlargedImg, setEnlargedImg] = useState(null);
@@ -88,6 +106,25 @@ export default function PortfolioUI({ projects, title = "Projects" }) {
           ))}
           </div>
         </div>
+
+        {title === "Projects" && (
+          <div className="mt-8">
+            <h2 className="text-xl font-bold text-white mb-4">Technology Stack</h2>
+            <div className="bg-white/5 rounded-2xl border border-white/10 p-5 flex flex-wrap gap-4">
+              {techStack.map(({ name, icon }) => (
+                <div key={name} className="relative group/tech flex flex-col items-center">
+                  <div className="w-10 h-10 flex items-center justify-center bg-white/10 rounded-xl border border-white/20 hover:bg-white/20 hover:scale-110 transition-all duration-200 cursor-default">
+                    <img src={icon} alt={name} className="w-6 h-6" />
+                  </div>
+                  <span className="pointer-events-none absolute -top-9 left-1/2 -translate-x-1/2 whitespace-nowrap bg-gray-900 text-white text-xs font-medium px-2 py-1 rounded-md opacity-0 group-hover/tech:opacity-100 transition-opacity duration-150 z-10">
+                    {name}
+                    <span className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-gray-900" />
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </>
   );
