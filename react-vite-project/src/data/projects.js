@@ -13,16 +13,7 @@ const projects = [
     description:
       "AI-powered kitchen management app built with React. Features include fridge/freezer/pantry tracking, photo scanning to add groceries, receipt scanning, and AI-powered meal suggestions based on what's on hand.",
     link: "https://mykitchenlist.vercel.app",
-    technologies: [
-      "React 19",
-      "React Router v7",
-      "Vite",
-      "Node.js",
-      "Express",
-      "Neon Postgres",
-      "Drizzle ORM",
-      "Claude (AWS Bedrock)",
-    ],
+    technologies: ["React", "Neon DB", "Node.js", "AWS Bedrock", "Websockets"],
     thinking: [],
   },
   {
@@ -46,7 +37,7 @@ const projects = [
       "Skate Spot Guesser is an interactive game inspired by GeoGuessr, where players are challenged to identify skate spots from Google Street View images. Test your knowledge of famous skate locations and explore new spots virtually. Built with Next.js and the Google Street View API.",
     link: "https://nextjs-skatespot-guesser.vercel.app/",
     gitHub: "https://github.com/JacobBaqleh1/nextjs-skatespot-guesser",
-    technologies: ["Next.js", "Google API", "Tailwind CSS"],
+    technologies: ["Next.js", "Google API", "Tailwind CSS", "Firebase DB"],
     thinking: [],
   },
   {

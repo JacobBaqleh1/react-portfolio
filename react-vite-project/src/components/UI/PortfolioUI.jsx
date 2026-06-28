@@ -72,7 +72,7 @@ export default function PortfolioUI({ projects, title = "Projects" }) {
                   {/* Tech badges */}
                   {project.technologies && (
                     <div className="flex flex-wrap gap-2 mb-4">
-                      {project.technologies.slice(0, 4).map((tech) => (
+                      {project.technologies.map((tech) => (
                         <span
                           key={tech}
                           className="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs font-semibold"
@@ -100,6 +100,17 @@ export default function PortfolioUI({ projects, title = "Projects" }) {
                   >
                     Visit Live Site
                   </button>
+                  {project.gitHub && (
+                    <button
+                      className="w-full px-3 py-2 text-sm bg-gray-900 text-white font-bold rounded-lg hover:scale-105 transition-transform"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        window.open(project.gitHub, "_blank");
+                      }}
+                    >
+                      View on GitHub
+                    </button>
+                  )}
                 </div>
               </div>
             </div>
