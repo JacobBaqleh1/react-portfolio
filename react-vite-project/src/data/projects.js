@@ -13,7 +13,13 @@ const projects = [
     description:
       "AI-powered kitchen management app built with React. Features include fridge/freezer/pantry tracking, photo scanning to add groceries, receipt scanning, and AI-powered meal suggestions based on what's on hand.",
     link: "https://mykitchenlist.vercel.app",
-    technologies: ["React", "Neon DB", "Node.js", "AWS Bedrock", "Websockets"],
+    gitHub: "https://github.com/JacobBaqleh1/Kitchen-list",
+    techCategories: [
+      { label: "Frontend", items: ["React"] },
+      { label: "Backend", items: ["Node.js", "Websockets"] },
+      { label: "Database", items: ["Neon DB"] },
+      { label: "AI", items: ["AWS Bedrock"] },
+    ],
     thinking: [],
   },
   {
@@ -25,7 +31,11 @@ const projects = [
       "ROAM is a web application that helps users discover and explore national parks across all 50 states. Featuring an interactive map interface, users can search for parks, save their favorites, and write personalized reviews. The platform includes user authentication for a tailored experience. ROAM is built with React on the frontend, Express for the backend, and MongoDB for data storage.",
     link: "https://roam-sigma.vercel.app/",
     gitHub: "https://github.com/JacobBaqleh1/ROAM",
-    technologies: ["React", "Node.js", "MongoDB", "GraphQL", "Tailwind CSS"],
+    techCategories: [
+      { label: "Frontend", items: ["React", "Tailwind CSS"] },
+      { label: "Backend", items: ["Node.js", "GraphQL"] },
+      { label: "Database", items: ["MongoDB"] },
+    ],
     thinking: [],
   },
   {
@@ -37,7 +47,11 @@ const projects = [
       "Skate Spot Guesser is an interactive game inspired by GeoGuessr, where players are challenged to identify skate spots from Google Street View images. Test your knowledge of famous skate locations and explore new spots virtually. Built with Next.js and the Google Street View API.",
     link: "https://nextjs-skatespot-guesser.vercel.app/",
     gitHub: "https://github.com/JacobBaqleh1/nextjs-skatespot-guesser",
-    technologies: ["Next.js", "Google API", "Tailwind CSS", "Firebase DB"],
+    techCategories: [
+      { label: "Frontend", items: ["Next.js", "Tailwind CSS"] },
+      { label: "APIs", items: ["Google API"] },
+      { label: "Database", items: ["Firebase DB"] },
+    ],
     thinking: [],
   },
   {
@@ -49,12 +63,15 @@ const projects = [
       "Pet Friends is a web application that connects users with adoptable pets through a live adoption API. Built with the Remix framework, it offers a seamless experience for browsing, searching, and learning more about pets looking for a new home.",
     link: "https://remix-pets.vercel.app/",
     gitHub: "https://github.com/JacobBaqleh1/remix-pets",
-    technologies: ["Remix.run", "Public API", "Tailwind CSS"],
+    techCategories: [
+      { label: "Frontend", items: ["Remix.run", "Tailwind CSS"] },
+      { label: "APIs", items: ["Public API"] },
+    ],
     thinking: [],
   },
 ];
 
-// Team / open-source projects (shown on the "Team Projects" tab).
+// Team / open-source projects (shown below personal projects on the home page).
 export const teamProjects = [
   {
     key: 101,
@@ -65,7 +82,9 @@ export const teamProjects = [
       "A legal AI platform that helps tenants understand their rights and navigate eviction processes. I've been building responsive React components, implementing TypeScript interfaces, and creating reusable UI elements for the frontend user experience.",
     link: "https://tenantfirstaid.com/",
     gitHub: "https://github.com/tenantfirstaid/tenantfirstaid",
-    technologies: ["React", "TypeScript"],
+    techCategories: [
+      { label: "Frontend", items: ["React", "TypeScript"] },
+    ],
     thinking: [],
   },
   {
@@ -77,7 +96,10 @@ export const teamProjects = [
       "Non-profit organization spreading awareness of traffic violence.",
     link: "https://pdxfamiliesforsafestreets.org/",
     gitHub: "https://github.com/BurlapRobot/pdx-fss",
-    technologies: ["JavaScript", "Decap CMS"],
+    techCategories: [
+      { label: "Frontend", items: ["JavaScript"] },
+      { label: "CMS", items: ["Decap CMS"] },
+    ],
     thinking: [],
   },
 ];

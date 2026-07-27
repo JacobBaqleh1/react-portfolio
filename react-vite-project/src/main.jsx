@@ -8,11 +8,10 @@ import About from "./pages/About.jsx";
 import Portfolio from "./pages/Portfolio.jsx";
 import Contact from "./pages/Contact.jsx";
 import Resume from "./pages/Resume.jsx";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, Navigate, RouterProvider } from "react-router-dom";
 import { ThemeProvider } from "./components/theme-provider.tsx";
 import Home from "./pages/Home.jsx";
 import ProjectDetail from "./pages/ProjectDetail.jsx";
-import OpenSource from "./pages/OpenSource.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -30,7 +29,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/opensource",
-        element: <OpenSource />,
+        element: <Navigate to="/" replace />,
       },
       {
         path: "/contact",

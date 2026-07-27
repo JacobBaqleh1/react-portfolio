@@ -1,8 +1,9 @@
 /* eslint-disable react/no-unknown-property */
 /* eslint-disable react/prop-types */
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import ProjectTechCategories from "./ProjectTechCategories";
 
 const techStack = [
   { name: "React",        icon: "https://cdn.simpleicons.org/react/61DAFB" },
@@ -22,13 +23,23 @@ const techStack = [
   { name: "Anthropic",    icon: "https://cdn.simpleicons.org/anthropic/white" },
 ];
 
-export default function PortfolioUI({ projects, title = "Projects" }) {
+export default function PortfolioUI({
+  projects,
+  title = "Projects",
+  showTechStack = false,
+  className = "",
+  headingClassName = "mb-6",
+}) {
   const navigate = useNavigate();
+  const scrollRowRef = useRef(null);
   const [enlargedImg, setEnlargedImg] = useState(null);
+
+  useEffect(() => {
+    scrollRowRef.current?.scrollTo({ left: 0 });
+  }, [projects, title]);
 
   return (
     <>
-      {/* Enlarged Image Modal */}
       {enlargedImg && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/70"
@@ -43,56 +54,57 @@ export default function PortfolioUI({ projects, title = "Projects" }) {
         </div>
       )}
 
-      <div className="p-6 sm:p-10 w-full">
-        <h2 className="text-2xl font-bold text-white mb-6">{title}</h2>
-        {/* Self-contained slideshow box — scrollbar sits just under the cards */}
+      <div className={`w-full ${className}`}>
+        <h2 className={`text-2xl font-bold text-white ${headingClassName}`}>{title}</h2>
         <div className="bg-white/5 rounded-2xl border border-white/10 p-5">
-          <div className="projects-scroll flex flex-col sm:flex-row gap-6 sm:overflow-x-auto sm:snap-x sm:snap-mandatory sm:pb-4">
+          <div
+            ref={scrollRowRef}
+            className="flex flex-col sm:flex-row gap-6 sm:overflow-x-auto sm:snap-x sm:snap-mandatory sm:pb-2 sm:scroll-px-0"
+          >
           {projects.map((project) => (
             <div
               key={project.key}
-              className="group relative flex flex-col w-full sm:w-72 sm:flex-shrink-0 sm:snap-start bg-white/90 rounded-2xl shadow-xl border border-transparent hover:border-blue-500 hover:shadow-blue-400/40 transition-all duration-300 overflow-hidden"
+              className="group relative flex flex-col w-full sm:w-80 sm:flex-shrink-0 sm:snap-start bg-white/90 rounded-2xl shadow-xl border border-transparent hover:border-blue-500 hover:shadow-blue-400/40 transition-all duration-300 overflow-hidden"
             >
-              <div className="overflow-hidden">
+              <div className="overflow-hidden h-36">
                 <img
                   src={project.img}
                   alt={project.title}
-                  className="w-full h-40 object-cover transition-transform duration-300 ease-in-out group-hover:scale-110 cursor-pointer"
+                  className="w-full h-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-110 cursor-pointer"
                   onClick={() => setEnlargedImg(project.img)}
                 />
               </div>
-              <div className="flex flex-col flex-1 justify-between p-5">
+              <div className="flex flex-col flex-1 justify-between p-4">
                 <div>
                   <h3
-                    className="text-xl font-bold mb-3 text-blue-900"
+                    className="text-lg font-bold mb-1.5 text-blue-900"
                     view-transition-name={`project-title-${project.key}`}
                   >
                     {project.title}
                   </h3>
-                  {/* Tech badges */}
-                  {project.technologies && (
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {project.technologies.map((tech) => (
-                        <span
-                          key={tech}
-                          className="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs font-semibold"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
+                  {project.description && (
+                    <p className="text-xs text-blue-900/75 leading-snug line-clamp-2 mb-2">
+                      {project.description}
+                    </p>
                   )}
+                  <ProjectTechCategories
+                    categories={project.techCategories}
+                    layout="inline"
+                    className="space-y-1 mb-3"
+                    badgeClassName="bg-blue-100 text-blue-700 px-1.5 py-0.5 rounded text-[11px] font-semibold"
+                    labelClassName="text-[10px] uppercase tracking-wide font-bold text-blue-500"
+                  />
                 </div>
 
-                <div className="flex flex-col gap-2">
+                <div className="flex flex-wrap gap-2">
                   <button
-                    className="w-full px-3 py-2 text-sm bg-gradient-to-r from-blue-500 to-blue-400 text-white font-bold rounded-lg shadow hover:scale-105 transition-transform"
+                    className="flex-1 min-w-[6.5rem] px-2.5 py-1.5 text-xs bg-gradient-to-r from-blue-500 to-blue-400 text-white font-bold rounded-lg shadow hover:scale-105 transition-transform"
                     onClick={() => navigate(`/projects/${project.slug}`)}
                   >
                     Read More
                   </button>
                   <button
-                    className="w-full px-3 py-2 text-sm border border-blue-400 text-blue-700 font-bold rounded-lg hover:bg-blue-50 transition-colors"
+                    className="flex-1 min-w-[6.5rem] px-2.5 py-1.5 text-xs border border-blue-400 text-blue-700 font-bold rounded-lg hover:bg-blue-50 transition-colors"
                     onClick={(e) => {
                       e.stopPropagation();
                       window.open(project.link, "_blank");
@@ -102,7 +114,7 @@ export default function PortfolioUI({ projects, title = "Projects" }) {
                   </button>
                   {project.gitHub && (
                     <button
-                      className="w-full px-3 py-2 text-sm bg-gray-900 text-white font-bold rounded-lg hover:scale-105 transition-transform"
+                      className="flex-1 min-w-[6.5rem] px-2.5 py-1.5 text-xs bg-gray-900 text-white font-bold rounded-lg hover:scale-105 transition-transform"
                       onClick={(e) => {
                         e.stopPropagation();
                         window.open(project.gitHub, "_blank");
@@ -118,7 +130,7 @@ export default function PortfolioUI({ projects, title = "Projects" }) {
           </div>
         </div>
 
-        {title === "Projects" && (
+        {showTechStack && (
           <div className="mt-8">
             <h2 className="text-xl font-bold text-white mb-4">Technology Stack</h2>
             <div className="bg-white/5 rounded-2xl border border-white/10 p-5 flex flex-wrap gap-4">
