@@ -19,6 +19,8 @@ const techStack = [
   { name: "Drizzle ORM",  icon: "https://cdn.simpleicons.org/drizzle/C5F74F" },
   { name: "Tailwind CSS", icon: "https://cdn.simpleicons.org/tailwindcss/06B6D4" },
   { name: "Vite",         icon: "https://cdn.simpleicons.org/vite/646CFF" },
+  { name: "Vercel",       icon: "https://cdn.simpleicons.org/vercel/white" },
+  { name: "Cloudflare",   icon: "https://cdn.simpleicons.org/cloudflare/F38020" },
   { name: "AWS",          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" },
   { name: "Anthropic",    icon: "https://cdn.simpleicons.org/anthropic/white" },
 ];
@@ -76,12 +78,19 @@ export default function PortfolioUI({
               </div>
               <div className="flex flex-col flex-1 justify-between p-4">
                 <div>
-                  <h3
-                    className="text-lg font-bold mb-1.5 text-blue-900"
-                    view-transition-name={`project-title-${project.key}`}
-                  >
-                    {project.title}
-                  </h3>
+                  <div className="flex items-start justify-between gap-2 mb-1.5">
+                    <h3
+                      className="text-lg font-bold text-blue-900"
+                      view-transition-name={`project-title-${project.key}`}
+                    >
+                      {project.title}
+                    </h3>
+                    {project.badge && (
+                      <span className="shrink-0 mt-0.5 text-[10px] uppercase tracking-wide font-bold bg-amber-100 text-amber-800 px-1.5 py-0.5 rounded">
+                        {project.badge}
+                      </span>
+                    )}
+                  </div>
                   {project.description && (
                     <p className="text-xs text-blue-900/75 leading-snug line-clamp-2 mb-2">
                       {project.description}

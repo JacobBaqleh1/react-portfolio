@@ -4,6 +4,29 @@
 // To add your write-up for a project, fill in the `thinking` field below.
 // It accepts an array of paragraphs (each string becomes its own paragraph).
 
+export const clientProjects = [
+  {
+    key: 5,
+    slug: "lara-renee-renaud-animation",
+    img: "/lara-renaud-animation.png",
+    title: "Lara Renee Renaud Animation",
+    badge: "Client Work",
+    description:
+      "Commissioned client website for animator and visual artist Lara Renee Renaud. A custom Next.js portfolio with dedicated pages for films, paintings, drawings, about, and contact. Animation reels and shorts stream from Cloudflare R2, and the site is hosted on Vercel.",
+    link: "https://www.larareneerenaudanimation.com",
+    techCategories: [
+      { label: "Frontend", items: ["Next.js", "Tailwind CSS"] },
+      { label: "Hosting", items: ["Vercel"] },
+      { label: "Storage", items: ["Cloudflare R2"] },
+    ],
+    thinking: [
+      "Lara needed a site that felt like her work: whimsical, painterly, and built around motion instead of a generic gallery template. I designed and built the full stack as a Next.js app with Tailwind CSS so every page—Home, Films, Paintings, Drawings, About, and Contact—could follow her visual language rather than a CMS theme.",
+      "The films section is the center of the site. Her 2024 reel and shorts (The Household, The Escape, Merry, Un/Write, Paradox) stream from Cloudflare R2 so large video files stay off the app server while remaining fast to play. A custom player sits on top of those R2 assets, and festival laurels sit alongside the work they belong to.",
+      "Paintings and drawings are laid out as image-forward galleries so the art stays the focus. The site is deployed on Vercel, with media delivered from R2 so the frontend stays light even as the portfolio grows.",
+    ],
+  },
+];
+
 const projects = [
   {
     key: 1,
@@ -106,6 +129,7 @@ export const teamProjects = [
 
 export function getProjectBySlug(slug) {
   return (
+    clientProjects.find((p) => p.slug === slug) ||
     projects.find((p) => p.slug === slug) ||
     teamProjects.find((p) => p.slug === slug)
   );

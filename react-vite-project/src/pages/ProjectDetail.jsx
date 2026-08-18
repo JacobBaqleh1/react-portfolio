@@ -35,12 +35,19 @@ export default function ProjectDetail() {
           className="w-full rounded-2xl shadow-2xl mb-8 border border-white/10"
         />
 
-        <h1
-          className="text-4xl sm:text-5xl font-extrabold text-blue-200 mb-4 tracking-tight"
-          view-transition-name={`project-title-${project.key}`}
-        >
-          {project.title}
-        </h1>
+        <div className="flex flex-wrap items-center gap-3 mb-4">
+          <h1
+            className="text-4xl sm:text-5xl font-extrabold text-blue-200 tracking-tight"
+            view-transition-name={`project-title-${project.key}`}
+          >
+            {project.title}
+          </h1>
+          {project.badge && (
+            <span className="text-xs uppercase tracking-wide font-bold bg-amber-200 text-amber-900 px-2.5 py-1 rounded">
+              {project.badge}
+            </span>
+          )}
+        </div>
 
         <ProjectTechCategories
           categories={project.techCategories}
