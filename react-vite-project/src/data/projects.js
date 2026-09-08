@@ -28,23 +28,23 @@ export const clientProjects = [
 ];
 
 const projects = [
-  {
-    key: 1,
-    slug: "mykitchenlist",
-    img: "/mykitchenlist.png",
-    title: "MyKitchenList",
-    description:
-      "AI-powered kitchen management app built with React. Features include fridge/freezer/pantry tracking, photo scanning to add groceries, receipt scanning, and AI-powered meal suggestions based on what's on hand.",
-    link: "https://mykitchenlist.vercel.app",
-    gitHub: "https://github.com/JacobBaqleh1/Kitchen-list",
-    techCategories: [
-      { label: "Frontend", items: ["React"] },
-      { label: "Backend", items: ["Node.js", "Websockets"] },
-      { label: "Database", items: ["Neon DB"] },
-      { label: "AI", items: ["AWS Bedrock"] },
-    ],
-    thinking: [],
-  },
+  // {
+  //   key: 1,
+  //   slug: "mykitchenlist",
+  //   img: "/mykitchenlist.png",
+  //   title: "MyKitchenList",
+  //   description:
+  //     "AI-powered kitchen management app built with React. Features include fridge/freezer/pantry tracking, photo scanning to add groceries, receipt scanning, and AI-powered meal suggestions based on what's on hand.",
+  //   link: "https://mykitchenlist.vercel.app",
+  //   gitHub: "https://github.com/JacobBaqleh1/Kitchen-list",
+  //   techCategories: [
+  //     { label: "Frontend", items: ["React"] },
+  //     { label: "Backend", items: ["Node.js", "Websockets"] },
+  //     { label: "Database", items: ["Neon DB"] },
+  //     { label: "AI", items: ["AWS Bedrock"] },
+  //   ],
+  //   thinking: [],
+  // },
   {
     key: 2,
     slug: "roam",
