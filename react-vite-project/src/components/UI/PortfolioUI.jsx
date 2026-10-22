@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unknown-property */
 /* eslint-disable react/prop-types */
 
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ProjectTechCategories from "./ProjectTechCategories";
 
@@ -33,12 +33,7 @@ export default function PortfolioUI({
   headingClassName = "mb-6",
 }) {
   const navigate = useNavigate();
-  const scrollRowRef = useRef(null);
   const [enlargedImg, setEnlargedImg] = useState(null);
-
-  useEffect(() => {
-    scrollRowRef.current?.scrollTo({ left: 0 });
-  }, [projects, title]);
 
   return (
     <>
@@ -58,15 +53,12 @@ export default function PortfolioUI({
 
       <div className={`w-full ${className}`}>
         <h2 className={`text-2xl font-bold text-white ${headingClassName}`}>{title}</h2>
-        <div className="inline-flex max-w-full bg-white/5 rounded-2xl border border-white/10 p-5">
-          <div
-            ref={scrollRowRef}
-            className="flex flex-col sm:flex-row gap-6 w-max max-w-full sm:overflow-x-auto sm:snap-x sm:snap-mandatory sm:pb-2 sm:scroll-px-0"
-          >
+        <div className="w-full bg-white/5 rounded-2xl border border-white/10 p-5">
+          <div className="flex flex-wrap gap-6">
           {projects.map((project) => (
             <div
               key={project.key}
-              className="group relative flex flex-col w-full sm:w-80 sm:flex-shrink-0 sm:snap-start bg-white/90 rounded-2xl shadow-xl border border-transparent hover:border-blue-500 hover:shadow-blue-400/40 transition-all duration-300 overflow-hidden"
+              className="group relative flex flex-col w-full sm:w-80 bg-white/90 rounded-2xl shadow-xl border border-transparent hover:border-blue-500 hover:shadow-blue-400/40 transition-all duration-300 overflow-hidden"
             >
               <div className="overflow-hidden h-36">
                 <img
