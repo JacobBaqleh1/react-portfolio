@@ -58,10 +58,10 @@ export default function PortfolioUI({
 
       <div className={`w-full ${className}`}>
         <h2 className={`text-2xl font-bold text-white ${headingClassName}`}>{title}</h2>
-        <div className="w-fit max-w-full bg-white/5 rounded-2xl border border-white/10 p-5">
+        <div className="inline-flex max-w-full bg-white/5 rounded-2xl border border-white/10 p-5">
           <div
             ref={scrollRowRef}
-            className="flex flex-col sm:flex-row gap-6 sm:overflow-x-auto sm:snap-x sm:snap-mandatory sm:pb-2 sm:scroll-px-0"
+            className="flex flex-col sm:flex-row gap-6 w-max max-w-full sm:overflow-x-auto sm:snap-x sm:snap-mandatory sm:pb-2 sm:scroll-px-0"
           >
           {projects.map((project) => (
             <div
