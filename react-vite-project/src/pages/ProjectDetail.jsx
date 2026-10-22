@@ -53,7 +53,7 @@ export default function ProjectDetail() {
           categories={project.techCategories}
           badgeClassName="bg-blue-200 text-blue-900 px-3 py-1 rounded text-xs font-semibold shadow"
           labelClassName="text-xs uppercase tracking-wide font-bold text-blue-300 mb-1.5"
-          className="space-y-3 mb-8"
+          className="flex flex-wrap gap-x-6 gap-y-3 mb-8"
         />
 
         {/* Description */}

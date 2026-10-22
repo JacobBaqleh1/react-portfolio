@@ -4,7 +4,7 @@ export default function ProjectTechCategories({
   categories,
   badgeClassName = "bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs font-semibold",
   labelClassName = "text-[10px] uppercase tracking-wide font-bold text-blue-500 mb-1",
-  className = "space-y-2",
+  className = "flex flex-wrap gap-x-4 gap-y-2",
   layout = "stacked",
 }) {
   if (!categories?.length) return null;
@@ -29,7 +29,7 @@ export default function ProjectTechCategories({
   return (
     <div className={className}>
       {categories.map(({ label, items }) => (
-        <div key={label}>
+        <div key={label} className="min-w-0">
           <p className={labelClassName}>{label}</p>
           <div className="flex flex-wrap gap-1.5">
             {items.map((tech) => (
