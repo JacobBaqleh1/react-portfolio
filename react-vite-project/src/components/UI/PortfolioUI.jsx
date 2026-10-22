@@ -99,7 +99,7 @@ export default function PortfolioUI({
                   <ProjectTechCategories
                     categories={project.techCategories}
                     layout="inline"
-                    className="flex flex-wrap gap-x-3 gap-y-1 mb-3"
+                    className="flex flex-wrap items-center gap-x-2.5 gap-y-1 mb-3"
                     badgeClassName="bg-blue-100 text-blue-700 px-1.5 py-0.5 rounded text-[11px] font-semibold"
                     labelClassName="text-[10px] uppercase tracking-wide font-bold text-blue-500"
                   />

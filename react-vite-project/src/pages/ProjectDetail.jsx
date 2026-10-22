@@ -51,9 +51,10 @@ export default function ProjectDetail() {
 
         <ProjectTechCategories
           categories={project.techCategories}
+          layout="inline"
           badgeClassName="bg-blue-200 text-blue-900 px-3 py-1 rounded text-xs font-semibold shadow"
-          labelClassName="text-xs uppercase tracking-wide font-bold text-blue-300 mb-1.5"
-          className="flex flex-wrap gap-x-6 gap-y-3 mb-8"
+          labelClassName="text-xs uppercase tracking-wide font-bold text-blue-300"
+          className="flex flex-wrap items-center gap-x-4 gap-y-2 mb-8"
         />
 
         {/* Description */}
