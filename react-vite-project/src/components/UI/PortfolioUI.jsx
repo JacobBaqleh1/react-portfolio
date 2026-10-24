@@ -53,59 +53,79 @@ export default function PortfolioUI({
 
       <div className={`w-full ${className}`}>
         <h2 className={`text-2xl font-bold text-white ${headingClassName}`}>{title}</h2>
-        <div className="w-full bg-white/5 rounded-2xl border border-white/10 p-5">
-          <div className="flex flex-wrap gap-6">
+        <div className="w-full">
+          <div className="flex flex-col gap-6">
           {projects.map((project) => (
-            <div
+            <article
               key={project.key}
-              className="group relative flex flex-col w-full sm:w-80 bg-white/90 rounded-2xl shadow-xl border border-transparent hover:border-blue-500 hover:shadow-blue-400/40 transition-all duration-300 overflow-hidden"
+              className="group relative flex flex-col md:flex-row w-full bg-white/90 rounded-2xl shadow-xl border border-transparent hover:border-blue-500 hover:shadow-blue-400/40 transition-all duration-300 overflow-hidden"
             >
-              <div className="overflow-hidden h-36">
+              <div className="overflow-hidden h-56 md:h-auto md:min-h-72 md:w-2/5 lg:w-96 shrink-0 bg-white">
                 <img
                   src={project.img}
                   alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-110 cursor-pointer"
+                  className="w-full h-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-105 cursor-pointer"
                   onClick={() => setEnlargedImg(project.img)}
                 />
               </div>
-              <div className="flex flex-col flex-1 justify-between p-4">
+              <div className="flex flex-col flex-1 justify-between gap-6 p-5 sm:p-6">
                 <div>
-                  <div className="flex items-start justify-between gap-2 mb-1.5">
+                  <div className="flex flex-wrap items-start justify-between gap-3 mb-4">
                     <h3
-                      className="text-lg font-bold text-blue-900"
+                      className="text-2xl font-bold text-blue-900"
                       view-transition-name={`project-title-${project.key}`}
                     >
                       {project.title}
                     </h3>
                     {project.badge && (
-                      <span className="shrink-0 mt-0.5 text-[10px] uppercase tracking-wide font-bold bg-amber-100 text-amber-800 px-1.5 py-0.5 rounded">
+                      <span className="shrink-0 mt-1 text-xs uppercase tracking-wide font-bold bg-amber-100 text-amber-800 px-2.5 py-1 rounded">
                         {project.badge}
                       </span>
                     )}
                   </div>
                   {project.description && (
-                    <p className="text-xs text-blue-900/75 leading-snug line-clamp-2 mb-2">
-                      {project.description}
-                    </p>
+                    <section className="mb-5">
+                      <h4 className="text-sm uppercase tracking-wide font-bold text-blue-500 mb-1">
+                        Overview
+                      </h4>
+                      <p className="text-sm sm:text-base text-blue-900/80 leading-relaxed">
+                        {project.description}
+                      </p>
+                    </section>
+                  )}
+                  {project.thinking?.length > 0 && (
+                    <section className="mb-5">
+                      <h4 className="text-sm uppercase tracking-wide font-bold text-blue-500 mb-1">
+                        Behind the Build
+                      </h4>
+                      {project.thinking.map((paragraph, idx) => (
+                        <p
+                          key={idx}
+                          className="text-sm sm:text-base text-blue-900/80 leading-relaxed mb-2 last:mb-0"
+                        >
+                          {paragraph}
+                        </p>
+                      ))}
+                    </section>
                   )}
                   <ProjectTechCategories
                     categories={project.techCategories}
                     layout="inline"
-                    className="flex flex-wrap items-center gap-x-2.5 gap-y-1 mb-3"
-                    badgeClassName="bg-blue-100 text-blue-700 px-1.5 py-0.5 rounded text-[11px] font-semibold"
-                    labelClassName="text-[10px] uppercase tracking-wide font-bold text-blue-500"
+                    className="flex flex-wrap items-center gap-x-4 gap-y-2"
+                    badgeClassName="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs font-semibold"
+                    labelClassName="text-xs uppercase tracking-wide font-bold text-blue-500"
                   />
                 </div>
 
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-3">
                   <button
-                    className="flex-1 min-w-[6.5rem] px-2.5 py-1.5 text-xs bg-gradient-to-r from-blue-500 to-blue-400 text-white font-bold rounded-lg shadow hover:scale-105 transition-transform"
+                    className="px-5 py-2.5 text-sm bg-gradient-to-r from-blue-500 to-blue-400 text-white font-bold rounded-lg shadow hover:scale-105 transition-transform"
                     onClick={() => navigate(`/projects/${project.slug}`)}
                   >
                     Read More
                   </button>
                   <button
-                    className="flex-1 min-w-[6.5rem] px-2.5 py-1.5 text-xs border border-blue-400 text-blue-700 font-bold rounded-lg hover:bg-blue-50 transition-colors"
+                    className="px-5 py-2.5 text-sm border border-blue-400 text-blue-700 font-bold rounded-lg hover:bg-blue-50 transition-colors"
                     onClick={(e) => {
                       e.stopPropagation();
                       window.open(project.link, "_blank");
@@ -115,7 +135,7 @@ export default function PortfolioUI({
                   </button>
                   {project.gitHub && (
                     <button
-                      className="flex-1 min-w-[6.5rem] px-2.5 py-1.5 text-xs bg-gray-900 text-white font-bold rounded-lg hover:scale-105 transition-transform"
+                      className="px-5 py-2.5 text-sm bg-gray-900 text-white font-bold rounded-lg hover:scale-105 transition-transform"
                       onClick={(e) => {
                         e.stopPropagation();
                         window.open(project.gitHub, "_blank");
@@ -126,7 +146,7 @@ export default function PortfolioUI({
                   )}
                 </div>
               </div>
-            </div>
+            </article>
           ))}
           </div>
         </div>

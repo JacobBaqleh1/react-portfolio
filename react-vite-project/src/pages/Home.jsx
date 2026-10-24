@@ -4,23 +4,20 @@ import projects, { clientProjects, teamProjects } from "../data/projects";
 export default function Home() {
   return (
     <section className="bg-[#324154] min-h-screen w-full overflow-x-hidden">
-      <div className="px-6 sm:px-10 pt-6 sm:pt-10">
+      <div className="flex flex-col gap-8 px-6 sm:px-10 pt-6 sm:pt-10 pb-10">
         <PortfolioUI
           projects={clientProjects}
           title="Client Work"
-          className="pb-4"
         />
         <PortfolioUI
           projects={projects}
           title="My Projects"
-          className="pt-0 -mt-2 sm:-mt-3 pb-4"
           headingClassName="mb-4"
         />
         <PortfolioUI
           projects={teamProjects}
           title="Team Projects"
           showTechStack
-          className="pt-0 -mt-2 sm:-mt-3"
           headingClassName="mb-4"
         />
       </div>
